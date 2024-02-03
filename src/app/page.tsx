@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <section className="space-y-64 bg-[url('/background.png')] bg-cover bg-center bg-no-repeat px-1 py-8">
+    <section className="space-y-52 bg-[url('/background.png')] bg-cover bg-center bg-no-repeat px-1 py-8">
       <section className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
         <div className="space-y-3">
           <H1 className="text-center sm:text-start">Hi, I&apos;m Pat 👋</H1>
@@ -29,9 +29,9 @@ export default function Home() {
             alt="A photo Patrick Carter"
             width={300}
             height={300}
-            className="rounded-full aspect-square border-2 object-cover shadow-md dark:border-foreground"
+            className="rounded-full aspect-square border-4 object-cover shadow-md dark:border-foreground border-foreground"
           />
-          <div className="flex justify-center mt-4 gap-3 sm:space-x-4 relative">
+          <div className="flex justify-center items-center mt-4 gap-8">
             <Link
               href="https://github.com/xCarter93"
               target="_blank"

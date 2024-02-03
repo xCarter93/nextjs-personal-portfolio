@@ -4,7 +4,7 @@ import AIChatButton from "./AIChatButton";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 bg-background shadow-md">
+    <header className="sticky top-0 bg-background shadow-lg">
       <div className="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-3 px-3 py-4">
         <nav className="space-x-4 font-medium text-lg">
           <Link href="/">Home</Link>
