@@ -1,16 +1,40 @@
 import { ChatOpenAI } from "@langchain/openai";
-import { ChatPromptTemplate, PromptTemplate } from "@langchain/core/prompts";
-import { LangChainStream, StreamingTextResponse } from "ai";
+import {
+  ChatPromptTemplate,
+  PromptTemplate,
+  MessagesPlaceholder,
+} from "@langchain/core/prompts";
+import {
+  LangChainStream,
+  Message as VercelChatMessage,
+  StreamingTextResponse,
+} from "ai";
 import { createStuffDocumentsChain } from "langchain/chains/combine_documents";
 import { getVectorStore } from "@/lib/astradb";
 import { createRetrievalChain } from "langchain/chains/retrieval";
+import { AIMessage, HumanMessage } from "@langchain/core/messages";
+import { createHistoryAwareRetriever } from "langchain/chains/history_aware_retriever";
+import { UpstashRedisCache } from "langchain/cache/upstash_redis";
+import { Redis } from "@upstash/redis";
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
     const messages = body.messages;
 
+    const chatHistory = messages
+      .slice(0, -1)
+      .map((message: VercelChatMessage) =>
+        message.role === "user"
+          ? new HumanMessage(message.content)
+          : new AIMessage(message.content),
+      );
+
     const currentMessageContent = messages[messages.length - 1].content;
+
+    const cache = new UpstashRedisCache({
+      client: Redis.fromEnv(),
+    });
 
     const { stream, handlers } = LangChainStream();
 
@@ -18,6 +42,30 @@ export async function POST(req: Request) {
       modelName: "gpt-3.5-turbo",
       streaming: true,
       callbacks: [handlers],
+      cache,
+    });
+
+    const rephrasingModel = new ChatOpenAI({
+      modelName: "gpt-3.5-turbo",
+      cache,
+    });
+
+    const retriever = (await getVectorStore()).asRetriever();
+
+    const rephrasePrompt = ChatPromptTemplate.fromMessages([
+      new MessagesPlaceholder("chat_history"),
+      ["user", "{input}"],
+      [
+        "user",
+        "Given the above conversation, generate a search query to look up in order to get information relevant to the current question. " +
+          "Don't leave out any relevant keywords.  Only return the query and no other text.",
+      ],
+    ]);
+
+    const historyAwareRetrieverChain = await createHistoryAwareRetriever({
+      llm: rephrasingModel,
+      retriever,
+      rephrasePrompt,
     });
 
     const prompt = ChatPromptTemplate.fromMessages([
@@ -30,6 +78,7 @@ export async function POST(req: Request) {
           "Format your messages in markdown format. \n\n" +
           "Context:\n{context}",
       ],
+      new MessagesPlaceholder("chat_history"),
       ["user", "{input}"],
     ]);
 
@@ -42,12 +91,14 @@ export async function POST(req: Request) {
       documentSeparator: "\n---------\n",
     });
 
-    const retriever = (await getVectorStore()).asRetriever();
     const retrievalChain = await createRetrievalChain({
       combineDocsChain,
-      retriever,
+      retriever: historyAwareRetrieverChain,
     });
-    retrievalChain.invoke({ input: currentMessageContent });
+    retrievalChain.invoke({
+      input: currentMessageContent,
+      chat_history: chatHistory,
+    });
 
     return new StreamingTextResponse(stream);
   } catch (error) {

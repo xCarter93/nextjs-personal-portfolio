@@ -19,15 +19,7 @@ export default function Page() {
       <hr className="border-muted" />
       <section className="space-y-3">
         <H2>Skills / Frameworks</H2>
-        <p>
-          I&apos;m an aspiring full-stack web developer specializing in:
-          <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-          </ul>
-        </p>
+        <p>I&apos;m an aspiring full-stack web developer specializing in:</p>
       </section>
       <hr className="border-muted" />
       <section className="space-y-3">
