@@ -8,7 +8,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Metadata } from "next";
-import Link from "next/link";
 import sfadmin_cert from "@/assets/sfadmin_cert.png";
 import pba_cert from "@/assets/pba_cert.png";
 import pd1_cert from "@/assets/pd1_cert.png";
@@ -48,8 +47,8 @@ export default function Page() {
       </section>
       <hr className="border-muted" />
       <section className="space-y-3">
-        <H2>Skills / Frameworks / Certifications</H2>
-        <div className="grid grid-cols-3">
+        <H2>Certifications</H2>
+        <div className="grid grid-cols-2 md:grid-cols-3">
           {certifications.map((cert) => (
             <div
               key={cert.title}

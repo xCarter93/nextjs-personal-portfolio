@@ -38,7 +38,7 @@ export default function Home() {
               rel="noopener noreferrer"
               title="Go to Github Profile"
             >
-              <FaGithub className="text-black text-3xl md:text-4xl dark:text-primary-foreground" />
+              <FaGithub className="text-3xl md:text-4xl text-foreground" />
             </Link>
 
             <Link
@@ -47,7 +47,7 @@ export default function Home() {
               rel="noopener noreferrer"
               title="Go to LinkedIn Profile"
             >
-              <FaLinkedin className="text-black text-3xl md:text-4xl dark:text-primary-foreground" />
+              <FaLinkedin className="text-3xl md:text-4xl text-foreground" />
             </Link>
             <Link
               href="https://www.salesforce.com/trailblazer/pcarter8"
@@ -55,7 +55,7 @@ export default function Home() {
               rel="noopener noreferrer"
               title="Go to Salesforce Profile"
             >
-              <FaSalesforce className="text-black text-3xl md:text-4xl dark:text-primary-foreground" />
+              <FaSalesforce className="text-3xl md:text-4xl text-foreground" />
             </Link>
           </div>
         </div>
