@@ -22,23 +22,26 @@ export default function Home() {
             I love building web applications and learning new technologies. I
             currently love working with Salesforce and Next.js!
           </p>
+          <p>
+            Head over to my contact page to reach out. I would love to connect!
+          </p>
         </div>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col items-center justify-center">
           <Image
             src={me}
             alt="A photo Patrick Carter"
             width={300}
             height={300}
-            className="rounded-full aspect-square border-4 object-cover shadow-md dark:border-foreground border-foreground"
+            className="aspect-square rounded-full border-4 border-foreground object-cover shadow-md dark:border-foreground"
           />
-          <div className="flex justify-center items-center mt-4 gap-8">
+          <div className="mt-4 flex items-center justify-center gap-8">
             <Link
               href="https://github.com/xCarter93"
               target="_blank"
               rel="noopener noreferrer"
               title="Go to Github Profile"
             >
-              <FaGithub className="text-3xl md:text-4xl text-foreground" />
+              <FaGithub className="text-3xl text-foreground md:text-4xl" />
             </Link>
 
             <Link
@@ -47,7 +50,7 @@ export default function Home() {
               rel="noopener noreferrer"
               title="Go to LinkedIn Profile"
             >
-              <FaLinkedin className="text-3xl md:text-4xl text-foreground" />
+              <FaLinkedin className="text-3xl text-foreground md:text-4xl" />
             </Link>
             <Link
               href="https://www.salesforce.com/trailblazer/pcarter8"
@@ -55,7 +58,7 @@ export default function Home() {
               rel="noopener noreferrer"
               title="Go to Salesforce Profile"
             >
-              <FaSalesforce className="text-3xl md:text-4xl text-foreground" />
+              <FaSalesforce className="text-3xl text-foreground md:text-4xl" />
             </Link>
           </div>
         </div>

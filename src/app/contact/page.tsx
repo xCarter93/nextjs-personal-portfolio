@@ -1,3 +1,9 @@
+import TerminalContactForm from "@/components/TerminalContactForm";
+
 export default function Page() {
-  return <div>Contact Page</div>;
+  return (
+    <div>
+      <TerminalContactForm />
+    </div>
+  );
 }
