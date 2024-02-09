@@ -13,6 +13,7 @@ import {
   useRef,
   useState,
 } from "react";
+import emailjs from "@emailjs/browser";
 
 const TerminalContactForm = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -166,7 +167,12 @@ const Summary = ({ questions, setQuestions }: SummaryProps) => {
     }, {});
 
     // Send this data to your server or whatever :)
-    console.log(formData);
+    emailjs.send(
+      "service_rd8uhka",
+      "template_qp2tsh3",
+      formData,
+      "3Nhi4rqzlU49tY7tu",
+    );
 
     setComplete(true);
   };
