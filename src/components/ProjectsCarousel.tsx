@@ -25,38 +25,40 @@ import Image from "next/image";
 
 export default function ProjectsCarousel() {
   return (
-    <Carousel className="min-w-[300px] p-10 md:w-full">
-      <CarouselContent className="-ml-1">
-        {projects.map((project) => (
-          <CarouselItem key={project.id} className="pl-1 md:basis-1/2">
-            <div className="p-1">
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <Card className="flex min-h-[450px] flex-col justify-between shadow-xl dark:shadow-indigo-500/50">
-                  <CardHeader className="mb-3 text-center">
-                    <CardTitle>{project.title}</CardTitle>
-                    <CardDescription>{project.category}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="flex items-center justify-center py-2">
-                    <Image
-                      className="rounded-lg"
-                      src={project.imgUrl}
-                      alt={project.description}
-                      height={250}
-                      width={250}
-                    />
-                  </CardContent>
-                  <CardFooter className="pb-6">
-                    <p>{project.description}</p>
-                  </CardFooter>
-                </Card>
-              </a>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+    <section>
+      <Carousel className="min-w-[300px] p-10 md:w-full">
+        <CarouselContent className="-ml-1">
+          {projects.map((project) => (
+            <CarouselItem key={project.id} className="pl-1 md:basis-1/2">
+              <div className="p-1">
+                <a href={project.url} target="_blank" rel="noopener noreferrer">
+                  <Card className="flex min-h-[450px] flex-col justify-between shadow-xl dark:shadow-indigo-500/50">
+                    <CardHeader className="mb-3 text-center">
+                      <CardTitle>{project.title}</CardTitle>
+                      <CardDescription>{project.category}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="flex items-center justify-center py-2">
+                      <Image
+                        className="rounded-lg"
+                        src={project.imgUrl}
+                        alt={project.description}
+                        height={250}
+                        width={250}
+                      />
+                    </CardContent>
+                    <CardFooter className="pb-6">
+                      <p>{project.description}</p>
+                    </CardFooter>
+                  </Card>
+                </a>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+    </section>
   );
 }
 

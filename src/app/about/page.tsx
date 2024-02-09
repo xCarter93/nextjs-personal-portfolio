@@ -12,6 +12,7 @@ import sfadmin_cert from "@/assets/sfadmin_cert.png";
 import pba_cert from "@/assets/pba_cert.png";
 import pd1_cert from "@/assets/pd1_cert.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About Me",
@@ -26,15 +27,12 @@ export default function Page() {
         <H2>Who am I?</H2>
         <p>
           My name is Patrick Carter and I am an aspiring full-stack software
-          engineer based out of Boston, Massachusetts. I started my coding
-          journey at the beginning of the COVID-19 epidemic as a way to broaden
-          my horizen and introduce myself to new things I could leverage in my
-          career.
-        </p>
-        <p>
-          I graduated from Marist University in 2015 with a B.A. in Mathematics.
-          I currently work at Datadog which is a SaaS company in the
-          observability space as a Manager of our Order Operations team.
+          engineer based out of Boston, Massachusetts. I graduated from Marist
+          College in 2015 with a Bachelor&apos;s degree in Mathematics. I
+          currently work at Datadog which is a SaaS company in the observability
+          space as a Manager of our Order Operations team. In my current
+          position I have been able to hone a lot of my skills while learning
+          others along the way.
         </p>
         <p>
           I started my coding journey learning Python for scripting and data
@@ -42,7 +40,23 @@ export default function Page() {
           joy I got from creating websites and web apps and being able to see my
           creations come to life was an experience unlike any other. I have
           since moved on to learning different frameworks such as React and
-          Next.js which is what this portfolio is built using!
+          Next.js which is what this portfolio is built using! In addition to
+          that I have also been learning Salesforce development and have
+          obtained 3 certifications in 2023 with hopes of earning more.
+        </p>
+        <p>
+          I am now in the next phase of my journey where I am trying to build up
+          my skills in order to get employed as a developer, either in the
+          Salesforce space or as a full-stack engineer. Feel free to check out
+          my{" "}
+          <Link className="text-primary underline" href="/projects">
+            projects
+          </Link>{" "}
+          to see what I have been working on or head over to my{" "}
+          <Link className="text-primary underline" href="/contact">
+            contact
+          </Link>{" "}
+          page to reach out and connect!
         </p>
       </section>
       <hr className="border-muted" />
@@ -82,7 +96,7 @@ export default function Page() {
           <AccordionItem value="datadog">
             <AccordionTrigger>
               <H3 className="flex flex-col">Datadog</H3>
-              <span className="font-normal flex flex-col">
+              <span className="flex flex-col font-normal">
                 <em>(Nov 2020 - Present)</em>
                 <em>Boston, MA</em>
               </span>
@@ -183,7 +197,7 @@ export default function Page() {
           <AccordionItem value="granite">
             <AccordionTrigger>
               <H3>Granite Telecommunications LLC</H3>
-              <span className="font-normal flex flex-col">
+              <span className="flex flex-col font-normal">
                 <em>(Feb 2016 - Nov 2020)</em>
                 <em>Quincy, MA</em>
               </span>
@@ -318,17 +332,6 @@ export default function Page() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-      </section>
-      <section className="space-y-3">
-        <H2>Side projects</H2>
-        <p>
-          In my free time, I like to work on side projects to keep my skill
-          sharp and try out new tech. Here is a list of my current projects:{" "}
-        </p>
-      </section>
-      <hr className="border-muted" />
-      <section className="space-y-3">
-        <H2>Hobbies</H2>
       </section>
     </section>
   );
