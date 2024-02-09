@@ -71,7 +71,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
             />
           )}
           {!error && messages.length === 0 && (
-            <div className="flex flex-col h-full items-center justify-center gap-3 text-center mx-8">
+            <div className="mx-8 flex h-full flex-col items-center justify-center gap-3 text-center">
               <Bot size={28} />
               <p className="text-lg font-medium">
                 Send a message to start the AI chat!
@@ -93,7 +93,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
         <form onSubmit={handleSubmit} className="m-3 flex gap-1">
           <button
             type="button"
-            className="flex items-center justify-center w-10 flex-none"
+            className="flex w-10 flex-none items-center justify-center"
             title="Clear chat"
             onClick={() => setMessages([])}
           >
@@ -104,12 +104,12 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
             value={input}
             onChange={handleInputChange}
             placeholder="Say something.."
-            className="grow border rounded bg-background px-3 py-2"
+            className="grow rounded border bg-background px-3 py-2"
             ref={inputRef}
           />
           <button
             type="submit"
-            className="flex items-center justify-center w-10 flex-none disabled:opacity-50"
+            className="flex w-10 flex-none items-center justify-center disabled:opacity-50"
             disabled={input.length === 0}
             title="Send message"
           >

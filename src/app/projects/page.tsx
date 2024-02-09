@@ -1,3 +1,9 @@
+import ProjectsCarousel from "@/components/ProjectsCarousel";
+
 export default function Page() {
-  return <div>Projects Page</div>;
+  return (
+    <div className="mt-16">
+      <ProjectsCarousel />
+    </div>
+  );
 }
