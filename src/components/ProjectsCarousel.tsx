@@ -21,6 +21,7 @@ import imagegallery from "@/assets/image-gallery.webp";
 import smartbrain from "@/assets/smartbrain-project-min.webp";
 import coffee from "@/assets/coffee-connoisseur.jpg";
 import jobsBoard from "@/assets/jobs-board.jpg";
+import blog from "@/assets/nextjs-blog.jpg";
 import Image from "next/image";
 
 export default function ProjectsCarousel() {
@@ -75,6 +76,15 @@ const projects = [
   },
   {
     id: 1,
+    imgUrl: blog,
+    category: "Next.js, Typescript, NextAuth",
+    title: "Blog Website",
+    description:
+      "An interactive blog website with authentication and admin dashboard.",
+    url: "https://nextjs14-blog-alpha.vercel.app/",
+  },
+  {
+    id: 2,
     imgUrl: flowbrain,
     category: "Next.js, Typescript, OpenAI, Pinecone, Shadcn UI, Clerk",
     title: "FlowBrain",
@@ -82,16 +92,16 @@ const projects = [
     url: "https://nextjs-notesapp-ai.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     imgUrl: ecommerce,
     category: "Typescript, Next.js, MongoDB, Prisma, DaisyUI",
-    title: "Flowmazon (Amazon Clone)",
+    title: "Amazon Clone",
     description:
       "Amazon clone that allows you to add products to a cart, sign in, sign out, etc.",
     url: "https://nextjs-ecommerce-xcarter93.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     imgUrl: coffee,
     category: "Next.js, Typescript, Tailwind CSS, Mapbox",
     title: "Coffee Connoisseur",
@@ -99,7 +109,7 @@ const projects = [
     url: "https://nextjs-coffee-connoisseur.vercel.app/",
   },
   {
-    id: 3,
+    id: 5,
     imgUrl: imagegallery,
     category: "Typescript, NextJS, Unsplash API",
     title: "NextJS Image Gallery",
@@ -107,7 +117,7 @@ const projects = [
     url: "https://nextjs13-image-gallery-eh4xhm4f0-xcarter93.vercel.app/",
   },
   {
-    id: 4,
+    id: 6,
     imgUrl: smartbrain,
     category: "ReactJS, Express, PostregSQL, Clarifai API",
     title: "SmartBrain",
