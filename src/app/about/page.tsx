@@ -95,7 +95,7 @@ export default function Page() {
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="datadog">
             <AccordionTrigger>
-              <H3 className="flex flex-col">Datadog</H3>
+              <H3 className="flex flex-col text-start">Datadog</H3>
               <span className="flex flex-col font-normal">
                 <em>(Nov 2020 - Present)</em>
                 <em>Boston, MA</em>
@@ -196,7 +196,9 @@ export default function Page() {
           </AccordionItem>
           <AccordionItem value="granite">
             <AccordionTrigger>
-              <H3>Granite Telecommunications LLC</H3>
+              <H3 className="flex flex-col text-start">
+                Granite Telecommunications LLC
+              </H3>
               <span className="flex flex-col font-normal">
                 <em>(Feb 2016 - Nov 2020)</em>
                 <em>Quincy, MA</em>
