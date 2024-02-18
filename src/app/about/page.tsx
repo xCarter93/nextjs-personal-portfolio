@@ -11,6 +11,7 @@ import { Metadata } from "next";
 import sfadmin_cert from "@/assets/sfadmin_cert.png";
 import pba_cert from "@/assets/pba_cert.png";
 import pd1_cert from "@/assets/pd1_cert.png";
+import jd1_cert from "@/assets/jd1_cert.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -42,7 +43,7 @@ export default function Page() {
           since moved on to learning different frameworks such as React and
           Next.js which is what this portfolio is built using! In addition to
           that I have also been learning Salesforce development and have
-          obtained 3 certifications in 2023 with hopes of earning more.
+          obtained multiple certifications with hopes of earning more.
         </p>
         <p>
           I am now in the next phase of my journey where I am trying to build up
@@ -62,11 +63,11 @@ export default function Page() {
       <hr className="border-muted" />
       <section className="space-y-3">
         <H2>Certifications</H2>
-        <div className="grid grid-cols-2 md:grid-cols-3">
+        <div className="grid grid-cols-2 md:grid-cols-4">
           {certifications.map((cert) => (
             <div
               key={cert.title}
-              className="flex flex-col items-center p-4 text-center"
+              className="flex flex-col items-center justify-start p-4 text-center"
             >
               <a href={cert.url} rel="noopener noreferrer" target="_blank">
                 <Image
@@ -357,5 +358,11 @@ const certifications = [
     issuedDate: new Date(2023, 10),
     imageSrc: pd1_cert,
     url: "https://trailhead.salesforce.com/en/credentials/platformdeveloperi",
+  },
+  {
+    title: "Salesforce Certified JavaScript Developer I",
+    issuedDate: new Date(2024, 1),
+    imageSrc: jd1_cert,
+    url: "https://trailhead.salesforce.com/en/credentials/javascriptdeveloperi",
   },
 ];
