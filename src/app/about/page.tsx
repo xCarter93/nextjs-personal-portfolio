@@ -107,41 +107,41 @@ export default function Page() {
                 <li className="space-y-1">
                   <strong>Manager, Order Operations</strong> (Jun 2021 -
                   Present)
-                  <ul className="list-disc space-y-1 indent-4">
-                    <li className="list-inside truncate">
+                  <ul className="list-inside list-disc space-y-1 pl-9 -indent-5">
+                    <li>
                       Manages a team of 8 across Boston, New York, Dublin and
                       Singapore that on average processes over 2,000 orders per
                       month.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Assists in building out complex business automation within
                       Salesforce using Process Builder, Flow Builder, APEX and
                       writing custom Lightning Web Components.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Utilizes Salesforce Reporting and Dashboarding daily to
                       ensure we are meeting all SLA&apos;s within a given month
                       and quarter.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Works cross-departmentally and meets regularly with
                       Engineering, Finance, Go To Market, Deal Desk and
                       Commission teams to review upcoming changes as well as
                       areas of improvement.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Responsible for upholding certain SOX compliance steps as
                       it pertains to the deal review process.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Working with Engineering PM&apos;s on overlapping projects
                       and offer valuable insight to ensure success of rollouts.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Meeting with Sales and CS leaders to review pain points
                       and coordinate plans to improve processes.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Wrote a Python script which communicates with Salesforce
                       and alleviates some of the manual aspects of Opportunity
                       review for the team to use.
@@ -152,40 +152,40 @@ export default function Page() {
                 <li className="list-inside">
                   <strong>Team Lead, Order Operations</strong> (Nov 2020 - Jun
                   2021)
-                  <ul className="list-disc space-y-1 indent-4">
-                    <li className="list-inside truncate">
+                  <ul className="list-inside list-disc space-y-1 pl-9 -indent-5">
+                    <li>
                       Brought on to assist the Order Operations team scale and
                       ensure all processes are being adhered to while also
                       trying to identify inefficiencies and implement long term
                       solutions.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Managed a team of 3 analysts across Boston and Dublin.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Responsible for reviewing all large Enterprise deals to
                       ensure accuracy of pricing, compliance with internal
                       policies, as well as deal structure and flagged to
                       necessary teams downstream.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Worked with our Sales Systems team to implement Salesforce
                       enhancements which lowered the chance of error and
                       increased efficiencies.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Responsible for sending out legal documents and customer
                       specific Order Forms for signature using DocuSign.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Responsible for existing contract changes requested by
                       Sales and Customer Success.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Held training sessions on a monthly basis on best
                       practices around deal closing and Salesforce cleanliness.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Worked within AWS, Azure, GCP Private Offer portals for
                       customers who wanted to buy Datadog through an external
                       marketplace.
@@ -210,44 +210,44 @@ export default function Page() {
                 <li className="space-y-1">
                   <strong>Senior Offer Management Supervisor</strong> (Apr 2019
                   - Nov 2020)
-                  <ul className="list-disc space-y-1 indent-4">
-                    <li className="list-inside truncate">
+                  <ul className="list-inside list-disc space-y-1 pl-9 -indent-5">
+                    <li>
                       Oversaw team of 12 analysts who handle entirety of quoting
                       responsibilities while monitoring and maintaining accuracy
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Able to manage and distribute workload evenly across team
                       while handling any escalations with management.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Brought in to help lead a marketing initiative requested
                       by CEO to revamp all customer facing documents.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Was heavily involved with integrating automated quoting
                       process within Salesforce CPQ.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Worked cross departmentally to ensure accuracy of cost and
                       revenue information as well as new company wide
                       initiatives.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Trusted to handle most reporting which includes weekly
                       report of workload and efficiency numbers as well
                       monthly/quarterly report which is used to assist in
                       personnel decisions as well as areas of focus
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Trusted to respond to and investigate inquiries which
                       involve high priority customers.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Assisted in training internal operations teams as well as
                       sales staff when new releases within Salesforce get
                       released as they pertain to CPQ.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Two direct reports ended up moving into full time CPQ
                       Analyst roles where they&apos;re sole responsibility was
                       the upkeep of Salesforce CPQ as well as building out new
@@ -258,17 +258,17 @@ export default function Page() {
                 <li className="space-y-1">
                   <strong>Cost Analysis and Savings Supervisor</strong> (Jun
                   2017 - Apr 2019)
-                  <ul className="list-disc space-y-1 indent-4">
-                    <li className="list-inside truncate">
+                  <ul className="list-inside list-disc space-y-1 pl-9 -indent-5">
+                    <li>
                       Oversaw a team of 10 analysts who were responsible for all
                       proposal quoting within the broader team
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Was responsible for dealing directly with upper management
                       daily, resolving credit requests/inquiries, and ensuring
                       all company and team procedures are followed accordingly
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Worked cross departmentally to ensure accuracy of cost and
                       revenue information as well as new company wide
                       initiatives
@@ -278,26 +278,24 @@ export default function Page() {
                 <li className="space-y-1">
                   <strong>Senior Cost Analysis and Savings Analyst</strong> (Apr
                   2017 – Jun 2017)
-                  <ul className="list-disc space-y-1 indent-4">
-                    <li className="list-inside truncate">
+                  <ul className="list-inside list-disc space-y-1 pl-9 -indent-5">
+                    <li>
                       Took on additional responsibilities while also completing
                       normal Cost Analysis and Savings duties with no loss of
                       efficiency
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Oversaw queue for West Palm Beach and Orlando branches
                       while delegating requests to different Cost Analysis and
                       Savings analysts.
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Established self as direct source of contact for
                       questions, concerns and quick turnaround times from sales
                       representatives.
                     </li>
-                    <li className="list-inside truncate">
-                      Experience working directly with customers.
-                    </li>
-                    <li className="list-inside truncate">
+                    <li>Experience working directly with customers.</li>
+                    <li>
                       Responsible for weekly and monthly reporting to upper
                       management.
                     </li>
@@ -306,25 +304,25 @@ export default function Page() {
                 <li className="space-y-1">
                   <strong>Cost Analysis and Savings Analyst</strong> (Feb 2016 –
                   Apr 2017)
-                  <ul className="list-disc space-y-1 indent-4">
-                    <li className="list-inside truncate">
+                  <ul className="list-inside list-disc space-y-1 pl-9 -indent-5">
+                    <li>
                       Analyzed invoices for potential customers and put together
                       savings reports based on their current Telecom spend
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Dealt directly with Florida sales branches who
                       consistently lead company in contributor of requests
                       (volume and size)
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Assisted in resolution of daily disputes and helped
                       answered all Premier, Sales and customer inquiries
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Led multiple high priority requests that CEO was directly
                       involved with as well as customer visits
                     </li>
-                    <li className="list-inside truncate">
+                    <li>
                       Internal Employee of the Month, 7/12/16, due to taking on
                       extra responsibilities such as updating team trackers as
                       well as helping to train new hires
