@@ -17,7 +17,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About Me",
-  description: "Learn more about Florian Walther and his work.",
+  description: "Learn more about Patrick Carter and his work.",
 };
 
 export default function Page() {
@@ -105,8 +105,31 @@ export default function Page() {
             <AccordionContent>
               <ul className="space-y-2">
                 <li className="space-y-1">
-                  <strong>Manager, Order Operations</strong> (Jun 2021 -
+                  <strong>Senior Sales Systems Analyst</strong> (April 2024 -
                   Present)
+                  <ul className="list-inside list-disc space-y-1 pl-9 -indent-5">
+                    <li>
+                      Obtained four separate Salesforce Certifications proving
+                      ability to work as an admin and developer within
+                      Salesforce and deliver results.
+                    </li>
+                    <li>
+                      Part of the CPQ team at Datadog responsible for updating
+                      and maintaining Product Rules, Approval Rules, Pricing
+                      Rules, as well as product configurations.
+                    </li>
+                    <li>
+                      Leverages Apex and Salesforce Flow Builder to build out
+                      complex business automations.
+                    </li>
+                    <li>
+                      Develop and maintain custom Lightning Web Components.
+                    </li>
+                  </ul>
+                </li>
+                <li className="space-y-1">
+                  <strong>Manager, Order Operations</strong> (Jun 2021 - April
+                  2024)
                   <ul className="list-inside list-disc space-y-1 pl-9 -indent-5">
                     <li>
                       Manages a team of 8 across Boston, New York, Dublin and
