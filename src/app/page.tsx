@@ -6,6 +6,7 @@ import H2 from "@/components/ui/H2";
 import { Bot } from "lucide-react";
 import { FaGithub, FaLinkedin, FaSalesforce } from "react-icons/fa";
 import Link from "next/link";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export const metadata: Metadata = {
   title: "Patrick Carter - My Smart Portfolio",
@@ -13,9 +14,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <section className="space-y-52 bg-[url('/background.png')] bg-cover bg-center bg-no-repeat px-1 py-8">
+    <section className="space-y-52 bg-[url('/background.png')] bg-cover bg-center bg-no-repeat px-1 py-8 antialiased">
       <section className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
         <div className="space-y-3">
+          <BackgroundBeams />
           <H1 className="text-center sm:text-start">Hi, I&apos;m Pat 👋</H1>
           <p className="text-center sm:text-start">
             I&apos;m an aspiring software engineer and full-stack web developer.
@@ -32,7 +34,7 @@ export default function Home() {
             alt="A photo Patrick Carter"
             width={300}
             height={300}
-            className="aspect-square rounded-full border-4 border-foreground object-cover shadow-md dark:border-foreground"
+            className="z-50 aspect-square rounded-full border-4 border-foreground object-cover shadow-md dark:border-foreground"
           />
           <div className="mt-4 flex items-center justify-center gap-8">
             <Link
