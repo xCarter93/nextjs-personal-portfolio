@@ -23,7 +23,6 @@ import coffee from "@/assets/coffee-connoisseur.jpg";
 import jobsBoard from "@/assets/jobs-board.jpg";
 import blog from "@/assets/nextjs-blog.jpg";
 import Image from "next/image";
-import { PinContainer } from "./ui/3d-pin";
 
 export default function ProjectsCarousel() {
   return (
