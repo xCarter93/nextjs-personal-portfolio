@@ -24,7 +24,7 @@ export default function Home() {
             I love building web applications and learning new technologies. I
             currently love working with Salesforce and Next.js!
           </p>
-          <p>
+          <p className="text-center sm:text-start">
             Head over to my contact page to reach out. I would love to connect!
           </p>
         </div>
@@ -34,7 +34,7 @@ export default function Home() {
             alt="A photo Patrick Carter"
             width={300}
             height={300}
-            className="z-50 aspect-square rounded-full border-4 border-foreground object-cover shadow-md dark:border-foreground"
+            className="z-10 aspect-square rounded-full border-4 border-foreground object-cover shadow-md dark:border-foreground"
           />
           <div className="mt-4 flex items-center justify-center gap-8">
             <Link
