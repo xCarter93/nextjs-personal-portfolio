@@ -52,6 +52,6 @@
     "typescript": "^5"
   },
   "overrides": {
-    "@langchain/core": "0.1.22"
+    "@langchain/core": "0.2.9"
   }
 }
