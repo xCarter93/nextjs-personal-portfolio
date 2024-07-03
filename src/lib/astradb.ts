@@ -1,4 +1,4 @@
-import { AstraDB } from "@datastax/astra-db-ts";
+import { DataAPIClient } from "@datastax/astra-db-ts";
 import { AstraDBVectorStore } from "@langchain/community/vectorstores/astradb";
 import { OpenAIEmbeddings } from "@langchain/openai";
 
@@ -30,5 +30,7 @@ export async function getVectorStore() {
 }
 
 export async function getEmbeddingsCollection() {
-  return new AstraDB(token, endpoint).collection(collection);
+  const client = new DataAPIClient(token);
+  const db = client.db(endpoint);
+  return db.collection(collection);
 }
