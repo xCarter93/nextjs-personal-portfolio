@@ -24,7 +24,6 @@ export async function getVectorStore() {
           dimension: 1536,
           metric: "cosine",
         },
-        checkExists: true,
       },
     },
   );
