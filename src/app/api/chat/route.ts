@@ -5,7 +5,7 @@ import {
   MessagesPlaceholder,
 } from "@langchain/core/prompts";
 import {
-  LangChainAdapter,
+  LangChainStream,
   Message as VercelChatMessage,
   StreamingTextResponse,
 } from "ai";
@@ -14,6 +14,8 @@ import { getVectorStore } from "@/lib/astradb";
 import { createRetrievalChain } from "langchain/chains/retrieval";
 import { AIMessage, HumanMessage } from "@langchain/core/messages";
 import { createHistoryAwareRetriever } from "langchain/chains/history_aware_retriever";
+import { UpstashRedisCache } from "@langchain/community/caches/upstash_redis";
+import { Redis } from "@upstash/redis";
 
 export async function POST(req: Request) {
   try {
@@ -30,19 +32,22 @@ export async function POST(req: Request) {
 
     const currentMessageContent = messages[messages.length - 1].content;
 
-    // const { stream, handlers } = LangChainStream();
-
-    const chatModel = new ChatOpenAI({
-      modelName: "gpt-3.5-turbo",
-      streaming: true,
+    const cache = new UpstashRedisCache({
+      client: Redis.fromEnv(),
     });
 
-    const stream = await chatModel.stream(body);
+    const { stream, handlers } = LangChainStream();
 
-    const aiStream = LangChainAdapter.toAIStream(stream);
+    const chatModel = new ChatOpenAI({
+      modelName: "gpt-4-turbo",
+      streaming: true,
+      callbacks: [handlers],
+      cache,
+    });
 
     const rephrasingModel = new ChatOpenAI({
-      modelName: "gpt-3.5-turbo",
+      modelName: "gpt-4-turbo",
+      cache,
     });
 
     const retriever = (await getVectorStore()).asRetriever();
@@ -95,7 +100,7 @@ export async function POST(req: Request) {
       chat_history: chatHistory,
     });
 
-    return new StreamingTextResponse(aiStream);
+    return new StreamingTextResponse(stream);
   } catch (error) {
     console.error(error);
 
